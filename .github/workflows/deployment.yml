@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Log level: $LEVEL"
+          echo $NAME
           echo "Tags: $TAGS"
           echo "Environment: $ENVIRONMENT"
           echo "${GITHUB_REF##*/}"
@@ -24,4 +24,5 @@ jobs:
           LEVEL: ${{ inputs.logLevel }}
           TAGS: ${{ inputs.tags }}
           ENVIRONMENT: ${{ inputs.environment }}
+          NAME: ${{ github.ref_name }}
           
