@@ -5,7 +5,7 @@ on:
       tag:
         description: 'Tag'
         required: true
-        type: tag
+        type: string
       environment:
           description: 'Environment to run tests against'
           type: environment
